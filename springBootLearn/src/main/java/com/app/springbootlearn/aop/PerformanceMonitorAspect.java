@@ -14,7 +14,7 @@ public class PerformanceMonitorAspect {
     public static final Logger LOGGER = LoggerFactory.getLogger(PerformanceMonitorAspect.class);
 
 
-    @Around("execution (* com.telusko.springbootrest.service.JobService.*(..))")
+    @Around("execution (* com.app.springbootlearn.service.JobService.*(..))")
     public Object monitorTime(ProceedingJoinPoint jp) throws Throwable {
 
         long start = System.currentTimeMillis();

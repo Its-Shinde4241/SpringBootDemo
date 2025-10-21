@@ -15,7 +15,7 @@ public class ValidationAspect {
     public static final Logger LOGGER = LoggerFactory.getLogger(ValidationAspect.class);
 
 
-    @Around("execution (* com.telusko.springbootrest.service.JobService.getJob(..)) && args(postId)")
+    @Around("execution (* com.app.springbootlearn.service.JobService.getJob(..)) && args(postId)")
     public Object validateAndUpdate(ProceedingJoinPoint jp, int postId) throws Throwable {
         if (postId < 0) {
             LOGGER.info("PostId is negative, updating it");
